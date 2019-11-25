@@ -2,8 +2,8 @@ language: go
 go:
   - 1.11.x
 install:
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
-    - sudo dpkg -i hugo*.deb
+  - go get github.com/gohugoio/hugo
+  - hugo version
 script:
   - mkdir -p themes/beautifulhugo && git clone https://GitHub.com/halogenica/beautifulhugo.git themes/beautifulhugo
   - hugo --theme beautifulhugo
